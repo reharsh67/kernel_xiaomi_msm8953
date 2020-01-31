@@ -1078,8 +1078,6 @@ EXPORT_SYMBOL(filp_clone_open);
 
 
 
-
-
 long do_sys_open(int dfd, const char __user *filename, int flags, umode_t mode)
 {
 	struct open_flags op;
