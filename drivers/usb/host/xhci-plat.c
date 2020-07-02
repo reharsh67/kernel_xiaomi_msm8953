@@ -441,6 +441,7 @@ static int xhci_plat_runtime_idle(struct device *dev)
 
 static int xhci_plat_pm_freeze(struct device *dev)
 {
+
 	struct usb_hcd *hcd = dev_get_drvdata(dev);
 	struct xhci_hcd *xhci = hcd_to_xhci(hcd);
 
@@ -500,6 +501,7 @@ static int xhci_plat_runtime_resume(struct device *dev)
 	pm_runtime_mark_last_busy(dev);
 
 	return ret;
+
 }
 
 static const struct dev_pm_ops xhci_plat_pm_ops = {
