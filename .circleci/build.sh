@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Cloning dependencies"
-git clone --depth=1 -b derp10 https://github.com/MASTERGUY/kernel_xiaomi_msm8953 kernel
+git clone --depth=1 -b stable https://github.com/reharsh67/kernel_xiaomi_msm8953 kernel
 cd kernel
 git clone --depth=1 -b master https://github.com/kdrag0n/proton-clang clang
 git clone https://github.com/MASTERGUY/AnyKernel3 -b tissot --depth=1 AnyKernel
@@ -12,7 +12,7 @@ BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 export PATH="$(pwd)/clang/bin:$PATH"
 export KBUILD_COMPILER_STRING="$($kernel/clang/bin/clang --version | head -n 1 | perl -pe 's/\((?:http|git).*?\)//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//' -e 's/^.*clang/clang/')"
 export ARCH=arm64
-export KBUILD_BUILD_USER=mtpiplod
+export KBUILD_BUILD_USER=reharsh67
 export KBUILD_BUILD_HOST=circleci
 # Compile plox
 function compile() {
