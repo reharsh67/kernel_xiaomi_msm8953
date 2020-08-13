@@ -2,7 +2,7 @@
 echo "Cloning dependencies"
 git clone --depth=1 -b stable https://github.com/reharsh67/kernel_xiaomi_msm8953 kernel
 cd kernel
-git clone --depth=1 -b master https://github.com/kdrag0n/proton-clang clang
+git clone --depth=1 https://github.com/KudProject/prebuilts_clang_host_linux-x86.git -b r383902 clang
 git clone https://github.com/MASTERGUY/AnyKernel3 -b tissot --depth=1 AnyKernel
 echo "Done"
 KERNEL_DIR=$(pwd)
