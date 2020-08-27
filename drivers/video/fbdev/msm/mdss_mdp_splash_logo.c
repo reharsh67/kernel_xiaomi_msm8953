@@ -32,6 +32,7 @@
 #define INVALID_PIPE_INDEX 0xFFFF
 #define MAX_FRAME_DONE_COUNT_WAIT 2
 
+
 static int mdss_mdp_splash_alloc_memory(struct msm_fb_data_type *mfd,
 							uint32_t size)
 {
